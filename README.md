@@ -6,7 +6,7 @@ Script aimed at comparing local Let's Encrypt certificates with the certificates
 
 ## Procedure
 
-Configure the ```conf.ini file```;<br>
+Configure the ```conf.ini``` file;<br>
 Add the domains to be analyzed and configured by the script in ```domains/*.conf```;<br>
 Add the ```script.sh``` to be executed via ```bash``` in the operating system's CRON.
 
