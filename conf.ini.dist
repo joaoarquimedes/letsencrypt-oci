@@ -1,0 +1,14 @@
+# Verbose mode script?
+Verbose=true
+# Log
+LOG_PATH="${PATH_FULL}/log"
+
+# OCI binary
+oci="/root/bin/oci"
+
+# Location of the Let's Encrypt digital certificates folder.
+# NOTE: Without the / (slash) at the end.
+LETSENCRYPT_PATH="/etc/letsencrypt/etc/live"
+
+# OCI -> ID Load Balancer
+OCID_LB=""

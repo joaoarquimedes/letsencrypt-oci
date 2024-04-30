@@ -1,0 +1,6 @@
+domains/*.conf
+log/*
+volumes/
+
+conf.ini
+script.log

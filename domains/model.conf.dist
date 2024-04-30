@@ -1,0 +1,32 @@
+# Enter a domain value, the same as the one present in the Let's Encrypt path '.../letsencrypt/etc/live/<DOMAIN>'. For example: mydomain.com.
+DOMAIN="<__DOMAIN__>"
+
+# Enter the listener informations.
+# See details in OCI: Networking > Load Balancers > Load Balancer > Load Balancer Details > Listeners.
+LISTENER="<__LISTENER_NAME__>"
+LISTENER_BACKEND="<__BACKEND_NAME_OF_LISTENER__>"
+LISTENER_HOSTNAMES='["<__DOMAIN_1__>", "<__DOMAIN_2__>"]'
+LISTENER_PROTOCOL="HTTP2"
+LISTENER_PORT="443"
+LISTENER_CIPHER="oci-default-http2-ssl-cipher-suite-v1"
+
+# Optional:
+# To update the same certificate from the listener to the Backend Set.
+# Provide the parameters below to also update the backend set.
+# Otherwise, just keep the BACKENDSET_NAME variable blank.
+# See details in OCI: Networking > Load balancers > Load balancer details > Backend sets > Backend set details > Backends
+BACKENDSET_NAME=""
+BACKENDSET_POLICY="ROUND_ROBIN"
+BACKENDSET_BACKENDS='
+  [
+    {
+      "backup": false,
+      "drain": false,
+      "ip-address": "<__IP_DO_BACKEND__>",
+      "offline": false,
+      "port": 443,
+      "weight": 1
+    }
+  ]'
+BACKENDSET_HEALTH_CHECKER_PROTOCOL="HTTP"
+BACKENDSET_HEALTH_CHECKER_URL_PATH="/"
