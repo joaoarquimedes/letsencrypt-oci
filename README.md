@@ -13,5 +13,5 @@ Add the ```script.sh``` to be executed via ```bash``` in the operating system's 
 ## Requirements
 
 - The digital Let's Encrypt certificate must already exist in the directory specified in the ```conf.ini``` (```LETSENCRYPT_PATH```).<br>
-- Manual creation of the Load Balancer, listeners, backend-set, and backend in OCI is required. Subsequently, the script will keep the digital certificate updated.<br>
-- This script does not create or update (renew) the Let's Encrypt certificates; it only compares the local certificate with the certificates published at the URL (domain) and publishes the certificate on the Load Balancer in OCI.
+- You are required to manually create the Load Balancer, listeners, backend set, and backend in OCI.<br>
+- This script does not create or renew Let's Encrypt certificates. It only compares the local certificate with the certificates published at the URL (domain) and then publishes the certificate on the Load Balancer in OCI.
